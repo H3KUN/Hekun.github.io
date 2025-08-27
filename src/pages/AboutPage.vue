@@ -47,19 +47,15 @@
 </template>
 
 <script>
+import profileData from '@/data/profile.json'
+
 export default {
   data () {
     return {
-      msg: 'No massage',
-      github: 'https://github.com/H3KUN',
-      qiita: 'https://qiita.com/HeKUN',
-      profiles: [
-        {id: 1, title: '2017/12:Japan Olympic of Information', description: 'Qualifying'},
-        {id: 2, title: '2018/12:Japan Olympic of Information', description: 'Qualifying'},
-        {id: 3, title: '2020/04:Entry to Shibaura Institute of Technology', description: 'Department of Electronic Information System'},
-        {id: 4, title: '2022/03:Open this pages', description: 'Trying Frontend developing'},
-        {id: 5, title: 'Qualification', description: 'TOEIC:660'}
-      ]
+      msg: profileData.about.message,
+      github: profileData.basic.github,
+      qiita: profileData.basic.qiita,
+      profiles: profileData.about.profiles
     }
   }
 }

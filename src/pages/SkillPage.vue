@@ -34,19 +34,21 @@
 </template>
 
 <script>
+import profileData from '@/data/profile.json'
+
 export default {
   data () {
+    // アイコンパスを動的に読み込む
+    const skills = profileData.skills.skills.map(skill => ({
+      ...skill,
+      icon1: skill.icon1 ? require('@/assets/' + skill.icon1) : null,
+      icon2: skill.icon2 ? require('@/assets/' + skill.icon2) : null,
+      icon3: skill.icon3 ? require('@/assets/' + skill.icon3) : null
+    }))
+
     return {
-      msg: 'Creater and Developer',
-      profiles: [
-        {id: 1, title: 'PHP', icon1: require('@/assets/php.svg'), icon2: require('@/assets/cakephp.svg'), description: 'Studying'},
-        {id: 2, title: 'Java', icon1: require('@/assets/java.svg'), description: 'Studying'},
-        {id: 3, title: 'HTML5/CSS3/JavaScript', icon1: require('@/assets/html-5.svg'), icon2: require('@/assets/css-3.svg'), icon3: require('@/assets/javascript.svg'), description: 'Studying'},
-        {id: 4, title: 'MySQL',icon1: require('@/assets/mysql.svg'), description: 'Studying'},
-        {id: 5, title: 'Linux',icon1: require('@/assets/linux-tux.svg'), description: 'Studying'},
-        {id: 6, title: 'Vue.js/Python', icon1: require('@/assets/vue.svg'), icon2: require('@/assets/python.svg'), description: 'Studying'},
-        {id: 7, title: 'GCP/Docker/CircleCI/NoSQL', icon1: require('@/assets/google-cloud.svg'), icon2: require('@/assets/circleci.svg'), icon3: require('@/assets/docker.svg'), description: 'Studying'}
-      ]
+      msg: profileData.skills.message,
+      profiles: skills
     }
   }
 }

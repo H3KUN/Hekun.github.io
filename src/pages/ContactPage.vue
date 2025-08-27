@@ -50,14 +50,16 @@
 </template>
 
 <script>
+import profileData from '@/data/profile.json'
+
 export default {
   data () {
     return {
-      msg: 'I\'m a institute student',
-      mail: 'Coming soon...',
-      twitter: 'Coming soon...',
-      facebook: 'Coming soon...',
-      wantedly: 'Coming soon...'
+      msg: profileData.contact.message,
+      mail: profileData.contact.mail,
+      twitter: profileData.contact.social.twitter,
+      facebook: profileData.contact.social.facebook,
+      wantedly: profileData.contact.social.wantedly
     }
   }
 }

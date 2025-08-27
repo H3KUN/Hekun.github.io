@@ -1,0 +1,130 @@
+{
+  "basic": {
+    "name": "Hekun",
+    "title": "Hekun's portfolio",
+    "welcome_message": "wellcome",
+    "github": "https://github.com/H3KUN",
+    "qiita": "https://qiita.com/HeKUN"
+  },
+  "about": {
+    "message": "No massage",
+    "profiles": [
+      {
+        "id": 1,
+        "title": "2017/12:Japan Olympic of Information",
+        "description": "Qualifying"
+      },
+      {
+        "id": 2,
+        "title": "2018/12:Japan Olympic of Information",
+        "description": "Qualifying"
+      },
+      {
+        "id": 3,
+        "title": "2020/04:Entry to Shibaura Institute of Technology",
+        "description": "Department of Electronic Information System"
+      },
+      {
+        "id": 4,
+        "title": "2022/03:Open this pages",
+        "description": "Trying Frontend developing"
+      },
+      {
+        "id": 5,
+        "title": "Qualification",
+        "description": "TOEIC:660"
+      }
+    ]
+  },
+  "skills": {
+    "message": "Creater and Developer",
+    "skills": [
+      {
+        "id": 1,
+        "title": "PHP",
+        "icon1": "php.svg",
+        "icon2": "cakephp.svg",
+        "icon3": null,
+        "description": "Studying"
+      },
+      {
+        "id": 2,
+        "title": "Java",
+        "icon1": "java.svg",
+        "icon2": null,
+        "icon3": null,
+        "description": "Studying"
+      },
+      {
+        "id": 3,
+        "title": "HTML5/CSS3/JavaScript",
+        "icon1": "html-5.svg",
+        "icon2": "css-3.svg",
+        "icon3": "javascript.svg",
+        "description": "Studying"
+      },
+      {
+        "id": 4,
+        "title": "MySQL",
+        "icon1": "mysql.svg",
+        "icon2": null,
+        "icon3": null,
+        "description": "Studying"
+      },
+      {
+        "id": 5,
+        "title": "Linux",
+        "icon1": "linux-tux.svg",
+        "icon2": null,
+        "icon3": null,
+        "description": "Studying"
+      },
+      {
+        "id": 6,
+        "title": "Vue.js/Python",
+        "icon1": "vue.svg",
+        "icon2": "python.svg",
+        "icon3": null,
+        "description": "Studying"
+      },
+      {
+        "id": 7,
+        "title": "GCP/Docker/CircleCI/NoSQL",
+        "icon1": "google-cloud.svg",
+        "icon2": "circleci.svg",
+        "icon3": "docker.svg",
+        "description": "Studying"
+      }
+    ]
+  },
+  "work": {
+    "message": "今まで開発したものです。クリックで詳細が表示されます。",
+    "projects": [
+      {
+        "id": 1,
+        "title": "Portfolio Site",
+        "url": "https://hekun.github.io/",
+        "giturl": "https://github.com/H3KUN/Hekun.github.io",
+        "description": "Vue.jsで作成した自己紹介サイトです。レスポンシブデザインに対応しており、スムーススクロールやアニメーション効果を実装しています。",
+        "technology": "Vue.js, HTML5, CSS3, JavaScript, Webpack, GitHub Pages"
+      },
+      {
+        "id": 2,
+        "title": "Sample Web Application",
+        "url": "#",
+        "giturl": "",
+        "description": "サンプルのWebアプリケーションです。実際のプロジェクトに置き換えてください。",
+        "technology": "HTML, CSS, JavaScript"
+      }
+    ]
+  },
+  "contact": {
+    "message": "I'm a institute student",
+    "mail": "Coming soon...",
+    "social": {
+      "twitter": "Coming soon...",
+      "facebook": "Coming soon...",
+      "wantedly": "Coming soon..."
+    }
+  }
+}

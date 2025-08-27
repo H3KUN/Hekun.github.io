@@ -18,17 +18,16 @@
 
 <script>
 import Work from '@/components/work'
+import profileData from '@/data/profile.json'
+
 export default {
   components: {
     'work-component': Work
   },
   data () {
     return {
-      msg: '今まで開発したものです。クリックで詳細が表示されます。',
-      posts: [
-        //{id: 1, title: 'HomePage', url: 'http://selene.himegimi.jp/', giturl: '', description: '（略）', technology: 'Java, eclipse, html, javascript, css'},
-        //{id: 2, title: 'Portfolio', url: 'https://c3drive.github.io/homepage-project/dist/', giturl: 'https://github.com/c3drive/homepage-project', description: 'このサイトです。', technology: 'vue-cli, github, html5, javascript, css'}
-      ]
+      msg: profileData.work.message,
+      posts: profileData.work.projects
     }
   }
 }

@@ -36,6 +36,8 @@ import AboutPage from '@/pages/AboutPage'
 import WorkPage from '@/pages/WorkPage'
 import SkillPage from '@/pages/SkillPage'
 import ContactPage from '@/pages/ContactPage'
+import profileData from '@/data/profile.json'
+
 export default {
   components: {
     'item-component': Item,
@@ -52,8 +54,8 @@ export default {
   name: 'Home',
   data () {
     return {
-      title: 'Hekun\'s portfolio',
-      msg: 'wellcome',
+      title: profileData.basic.title,
+      msg: profileData.basic.welcome_message,
       sections: [
         {id: 1, title: 'About', link: 'about', icon: 'fas fa-user'},
         {id: 2, title: 'Work', link: 'work', icon: 'fas fa-images'},
