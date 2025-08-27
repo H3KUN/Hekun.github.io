@@ -25,6 +25,7 @@
                 class="text"
                 v-bind:href="this.url"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {{ this.url }}
               </a>
@@ -40,6 +41,7 @@
                 v-if="this.giturl.length"
                 v-bind:href="this.giturl"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {{ this.giturl }}
               </a>
@@ -102,6 +104,11 @@ h3::after {
   background-color: #ccc;
   margin: auto;
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 li {
     display: list-item;
     padding: 10px 8px;
@@ -113,19 +120,47 @@ li::after {
     display: block;
     clear: both;
 }
+.left-field {
+  float: left;
+  width: 30%;
+  font-weight: bold;
+}
+.right-field {
+  float: right;
+  width: 70%;
+}
+.caption {
+  margin: 0;
+  font-weight: bold;
+}
+.text {
+  margin: 0;
+}
 .workindex {
   display: inline-block;
   width: 25%;
   background-color: #24292D;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.workindex:hover {
+  background-color: #333;
 }
 .work {
     margin: 10px auto;
     padding: 10px;
     border: solid #b0c4de 1px;
+    border-radius: 4px;
 }
 
 .work a {
-    color: black;
+    color: #007bff;
     text-decoration-line: underline;
+}
+.work a:hover {
+    color: #0056b3;
 }
 </style>
