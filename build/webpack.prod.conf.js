@@ -113,6 +113,15 @@ const webpackConfig = merge(baseWebpackConfig, {
         from: path.resolve(__dirname, '../static'),
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
+      },
+      // GitHub Pages configuration files
+      {
+        from: path.resolve(__dirname, '../static/404.html'),
+        to: config.build.assetsRoot
+      },
+      {
+        from: path.resolve(__dirname, '../.nojekyll'),
+        to: config.build.assetsRoot
       }
     ])
   ]
