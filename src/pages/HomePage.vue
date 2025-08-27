@@ -48,7 +48,12 @@ export default {
   },
   methods: {
     doSmoothScroll (id) {
-      this.$SmoothScroll(document.getElementById(id), 1000, null, null, 'y')
+      const element = document.getElementById(id)
+      if (element) {
+        this.$SmoothScroll(element, 1000, null, null, 'y')
+      } else {
+        console.warn(`Element with id '${id}' not found`)
+      }
     }
   },
   name: 'Home',

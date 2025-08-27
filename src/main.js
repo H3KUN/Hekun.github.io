@@ -6,11 +6,29 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
-})
-console.log("Why");
+// DOM Ready状態を確認してからVueアプリを初期化
+function initVueApp() {
+  const appElement = document.getElementById('app')
+  if (appElement) {
+    /* eslint-disable no-new */
+    new Vue({
+      el: '#app',
+      router,
+      components: { App },
+      template: '<App/>'
+    })
+    console.log("Vue app initialized successfully")
+  } else {
+    console.error("App element not found")
+    // 少し待ってリトライ
+    setTimeout(initVueApp, 100)
+  }
+}
+
+// DOMContentLoadedイベントを待つ
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initVueApp)
+} else {
+  // すでにDOMがロードされている場合
+  initVueApp()
+}

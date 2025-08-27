@@ -12,6 +12,7 @@ Vue.use(smoothScroll)
 
 export default new Router({
   // mode: 'history', //GitHubPagesで画面が出ないためコメントアウトする
+  base: process.env.NODE_ENV === 'production' ? '/Hekun.github.io/' : '/',
   routes: [
     {
       path: '/',
