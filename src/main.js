@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// Font Awesome ローカルインポート
+import '@fortawesome/fontawesome-free/css/all.css'
+
 Vue.config.productionTip = false
 
 // DOM Ready状態を確認してからVueアプリを初期化
