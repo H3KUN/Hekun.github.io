@@ -13,7 +13,26 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  errorCaptured(err, instance, info) {
+    console.error('Global Vue error captured in App.vue:', err, info)
+    // エラーの伝播を停止
+    return false
+  },
+  mounted() {
+    console.log('App.vue mounted successfully')
+    
+    // グローバルエラーハンドラー
+    window.addEventListener('error', (event) => {
+      console.error('Global JavaScript error:', event.error)
+      event.preventDefault()
+    })
+    
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('Unhandled promise rejection:', event.reason)
+      event.preventDefault()
+    })
+  }
 }
 </script>
 

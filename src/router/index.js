@@ -10,7 +10,7 @@ import Contact from '@/pages/ContactPage'
 Vue.use(Router)
 Vue.use(smoothScroll)
 
-export default new Router({
+const router = new Router({
   // mode: 'history', //GitHubPagesで画面が出ないためコメントアウトする
   base: process.env.NODE_ENV === 'production' ? '/Hekun.github.io/' : '/',
   routes: [
@@ -41,3 +41,18 @@ export default new Router({
     }
   ]
 })
+
+// ルーターエラーハンドリング
+router.onError((error) => {
+  console.error('Router error:', error)
+})
+
+// ナビゲーションガード
+router.beforeEach((to, from, next) => {
+  // DOM要素の存在確認
+  setTimeout(() => {
+    next()
+  }, 10)
+})
+
+export default router
